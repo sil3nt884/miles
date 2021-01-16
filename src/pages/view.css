@@ -1,0 +1,20 @@
+.container{
+    position: absolute;
+    margin: auto;
+    left : 0;
+    right : 0;
+    width: 1000px;
+    top: 50px
+}
+
+
+.user {
+    border-bottom:  1px solid black;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+

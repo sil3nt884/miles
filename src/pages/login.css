@@ -1,0 +1,46 @@
+.container{
+    position: absolute;
+    margin: auto;
+    left : 0;
+    right : 0;
+    width: 1000px;
+    top: 50px
+}
+
+.signIn {
+    border-bottom:  1px solid black;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+.form-group{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    margin-left: 5px;
+    font-size: 20px;
+}
+
+.form-input {
+    width: 1000px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+@media only screen and (max-width: 1022px) {
+    .form-input {
+        width: 97%;
+    }
+    .signIn {
+        width: 97%;
+    }
+}
