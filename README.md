@@ -1,5 +1,7 @@
 To run or test the project please run these following commands 
 
+
+### `npm i`
 ### `npm start`
 ### `npm test`
 ### `npm run build`
