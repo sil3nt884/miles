@@ -9,6 +9,12 @@ import {
     Redirect
 } from "react-router-dom";
 
+const validate = (data) => {
+    return Object
+        .values(data)
+        .filter(e => e !== '').length === 3
+}
+
 const LoginUL = () => {
 
     const history = useHistory()
@@ -21,18 +27,24 @@ const LoginUL = () => {
             password: document.getElementById('password').value,
             type: 'USER_PASSWORD_AUTH'
         }
-        const postOptions = {
-            method : 'POST',
-            headers : {
-                'environment': 'mock',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(dataToSend)
-        }
-         let data = await fetch('https://api.bybits.co.uk/auth/token', postOptions)
-            .then(res => res.json())
 
-        history.push(`/login`, [data])
+        if (validate(dataToSend)) {
+            const postOptions = {
+                method: 'POST',
+                headers: {
+                    'environment': 'mock',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(dataToSend)
+            }
+            let data = await fetch('https://api.bybits.co.uk/auth/token', postOptions)
+                .then(res => res.json())
+
+            history.push(`/login`, [data])
+        }
+        else {
+            alert('please enter a username and password')
+        }
     }
 
     return (<div className={'container'}>
